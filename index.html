@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- External libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css"
+    />
+    <!-- External libraries -->
+
+    <!-- External fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <!-- External fonts -->
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Музей археології ХНУ імені В. Н. Каразіна</title>
+  </head>
+  <body>
+    <!-- MOVING FISH SECTION -->
+    <div id="movingFish">
+      <div class="logo small pots small hidden">
+        <div class="fish-jump">
+          <div id="fish">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="364.9 337.2 217.5 153.8"
+            >
+              <path
+                fill="#fff"
+                d="M530.8 483.1l-51.6-51.6 51.6-51.6 51.6 51.6-51.6 51.6zm-28-52l28 28 28-28-28-28-28 28z"
+              />
+              <path
+                fill="#fff"
+                d="M506.7 491.1l-59.9-59.9 59.9-59.5 21.8 21.8-11.7 11.9-10.1-10.1-35.9 35.9 35.9 36.3 10.1-10 11.7 11.7"
+              />
+              <path
+                fill="#fff"
+                d="M474.8 491.1l-59.9-59.9 59.9-59.5 21.8 21.8-11.7 11.9-10.1-10.1-35.9 35.9 35.9 36.3 10.1-10 11.7 11.7"
+              />
+              <path
+                fill="#fff"
+                d="M393 477l-11.9-11.7 33.7-34.1-33.7-33.7 11.9-11.7 45.9 45.4"
+              />
+              <path
+                fill="#fff"
+                d="M376.8 461.3l-11.9-11.7 18-18.5-18-18 11.9-11.7 30.2 29.7M539.3 430.5l-8.5-8.4-7.8 8.4 7.8 7.8 8.5-7.8M500.3 387.4l-38.8-38.1 11.8-12 38.8 38.1-11.8 12zM468.7 387.2l-23.2-22.8 11.8-12 23.2 22.8-11.8 12z"
+              />
+            </svg>
+          </div>
+          <div id="water">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="164.9 239.9 281.5 540.5"
+            >
+              <g>
+                <g>
+                  <path
+                    fill="#fff"
+                    d="M332.8 283.2L305.6 256l-27.1 27.2-27.6-27.2-27.1 27.2-27.6-27.2-23.3 23.3-8-8 31.3-31.4 27.6 27.2 27.1-27.2 27.6 27.2 27.1-27.2 27.2 27.2 27.5-27.2 27.2 27.2 27.5-27.2 31.4 31.4-8.1 8L415 256l-27.5 27.2-27.2-27.2"
+                  />
+                </g>
+              </g>
+              <g>
+                <g id="monster">
+                  <path
+                    fill="#fff"
+                    d="M319.4 627.8l-13.8 13.8-13.8-13.8 13.8-13.8 13.8 13.8m-41.3-59.3l27.5-27.5 27.5 27.5-27.5 27.5-27.5-27.5zm18.3-55.1l9.2-9.2 9.2 9.2-9.2 9.2-9.2-9.2zm-18.3-18.3l27.5-27.5 27.5 27.5-9.2 9.2-18.4-18.4-18.4 18-9-8.8zm64.2 82.2l27.5 27.5 54.7-54.7-9.2-9.2-18.3 18.4v-36.7h-13v49.7l-14.5 14.5-54.7-55.1 9.2-9.2 27.5 27.5 9.2-9.2-27.5-27.5 9.2-9.2 18.4 18.4 9.2-9.2-18.4-18.4 18.4-18.4-9.2-9.2-18.4 18.4-27.5-27.5 18.4-18.4-9.2-9.2-18.4 18.4-18.4-18.4-9.2 9.2 18.4 18.4-27.5 27.5-18.4-18.4-9.2 9.2 18.4 18.4-18.4 18 9.2 9.2 18-18 9.2 9.2-27.6 27.7 9.2 9.2 27.5-27.5 9.2 9.2-27.5 27.5-9.2 9.2-18.4 18.3-14.5-14.5V523h-12.2v36.3L195.8 541l-9.2 9.2 54.7 55.1 9.2-9.2 18.4-18.4 27.5 27.5-13.7 13.8-13.8-13.8-9.2 9.2 13.8 13.8-32.1 32.1 9.2 9.2 18.4 18.4-18.4 18.4 9.2 9.2 27.5-27.5-27.5-27.5 23-23 16.4 16.4v24.9h13v-24.9l16.4-16.4 23 23-27.6 27.3 27.5 27.5 9.2-9.2-18.4-18.4 27.5-27.5-32.1-32.1 13.8-13.8-9.2-9.2-13.7 13.9-13.8-13.8 27.5-27.9z"
+                  />
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    fill="#fff"
+                    d="M196.2 780.4L164.9 749l8-8 23.3 23.3 27.6-27.5 27.1 27.5 27.6-27.5 27.1 27.5 27.2-27.5 27.5 27.5 27.2-27.5 27.5 27.5 23.3-23.3 8.1 8-31.4 31.4-27.5-27.1-27.2 27.1-27.5-27.1-27.2 27.1-27.1-27.1-27.6 27.1-27.1-27.1"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="slide slide-1 hidden">
+          <div class="title-animation animation"></div>
+          <div class="menu">
+            <div id="smoke-1" class="smoke-animation animation">
+              <div class="frame"></div>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div id="smoke-2" class="smoke-animation animation">
+            <div class="frame"></div>
+          </div>
+          <div class="fade top"></div>
+          <div id="scroller"></div>
+          <div class="fade bottom"></div>
+        </div>
+      </div>
+    </div>
+    <!-- MOVING FISH SECTION -->
+
+    <div id="main">
+      <!-- SLIDESHOW SECTION -->
+      <div id="section">
+        <div class="swiper-container slideshow">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+              <div
+                class="slide-image"
+                style="background-image: url(./images/slider1.jpeg)"
+              ></div>
+              <span class="slide-title">Молодіжно</span>
+            </div>
+
+            <div class="swiper-slide slide">
+              <div
+                class="slide-image"
+                style="background-image: url(./images/slider2.jpeg)"
+              ></div>
+              <span class="slide-title">Актуально</span>
+            </div>
+
+            <div class="swiper-slide slide">
+              <div
+                class="slide-image"
+                style="background-image: url(./images/slider3.jpeg)"
+              ></div>
+              <span class="slide-title">Незвично</span>
+            </div>
+          </div>
+
+          <div class="slideshow-pagination"></div>
+
+          <div class="slideshow-navigation">
+            <div class="slideshow-navigation-button prev">
+              <span class="fas fa-chevron-left"></span>
+            </div>
+            <div class="slideshow-navigation-button next">
+              <span class="fas fa-chevron-right"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDESHOW SECTION -->
+
+      <!-- INFO SECTION -->
+      <div class="panels">
+        <div class="panels__container">
+          <a href="#" class="panel" id="panel1">
+            <div
+              class="panel__content"
+              style="background-image: url(./images/history.jpg)"
+            >
+              <h3 class="panel__title">Історія</h3>
+              <div id="panel1_description">
+                <p>
+                  Музей археології , що існує при Харківському національному
+                  університеті імені В. Н. Каразина, майже ровесник самого
+                  університету, — є власником найстаріших фондів не тільки в
+                  Харківському регіоні.
+                </p>
+                <p>
+                  Свою історію він веде з 1807 року, коли при університеті було
+                  створено кабінет рідкостей. У тому ж році в нього надійшли
+                  артефакти й інші предмети старожитностей, привезені з Ольвії
+                  та Воронезької губернії. Приблизно в той же час доктор
+                  Ландбадом пожертвував етнографічну колекцію, зібрану ним під
+                  час першої російської кругосвітньої експедиції у 1803–1806
+                  роках під керівництвом І. Ф. Крузенштерна.
+                </p>
+                <p>
+                  З моменту створення і до 1936 року директором музею був О. С.
+                  Федоровський, один з ведучих українських археологів 20–30-х
+                  років ХХ століття. У 1920 році, у зв’язку з ліквідацією
+                  Харківського університету, Археологічний музей одержав статус
+                  міського. У 1933 році, з відновленням Харківського
+                  університету, Археологічний музей увійшов до складу
+                  історичного факультету. У результаті проведення планомірних
+                  археологічних розвідок і розкопок харківськими дослідниками у
+                  20–30-х роках, колекція Археологічного музею виросла майже до
+                  200 тисяч експонатів.
+                </p>
+
+                <p>
+                  У 1998 році, музей одержав назву — Музей археології й
+                  етнографії Слобідської України Харківського національного
+                  університету імені В. Н. Каразіна.
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="panel" id="panel2">
+            <div
+              class="panel__content"
+              style="background-image: url(./images/today.jpg)"
+            >
+              <h3 class="panel__title">Сьогодення</h3>
+              <div id="panel2_description">
+                <p>
+                  У музеї археології Харківського національного університету
+                  імені В. Н. Каразіна функціонує постійна експозиція «Внесок
+                  вчених університету в розвиток археологічної науки», кожні 3-4
+                  місяці відкриваються тимчасові виставки, що презентують
+                  предмети як з фондів Музею археології, так і з колекцій інших
+                  музеїв Харкова та області.
+                </p>
+                <p>
+                  На базі постійної експозиції та тимчасових виставок
+                  співробітниками музею проводяться загальні та тематичні
+                  екскурсії для відвідувачів різних вікових груп. На базі Музею
+                  археології Харківського національного університету проводяться
+                  заняття археологічного гуртка Малого Каразінського
+                  університету, а також археологічна практика для студентів 1
+                  курсу історичного факультету ХНУ ім. В. Н. Каразіна.
+                </p>
+
+                <p>
+                  Музей археології є базою для діяльності трьох археологічних
+                  експедицій, які досліджують пам’ятки Дніпро-Донецького
+                  Лісостепу епохи раннього залізного віку, відоме Більське
+                  городище скіфського часу, поселення та могильники
+                  пізньоримського часу та пам’ятки доби раннього середньовіччя
+                  (керівники І. Б. Шрамко, М. В. Любичев, В. В. Скирда).
+                </p>
+
+                <p>
+                  При Музеї функціонує архів, де зібрані наукові звіти
+                  дослідників та інші документи пов’язані з діяльністю музею та
+                  історичного факультету ХНУ імені В. Н. Каразіна, а також
+                  бібліотека.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- INFO SECTION -->
+
+      <!-- QUIZ SECTION -->
+      <div id="quiz">
+        <header>
+          <h1>Вікторина</h1>
+          <h2>
+            10 простих запитань про Музей археології ХНУ імені В. Н. Каразіна
+          </h2>
+        </header>
+        <ul id="questionsList">
+          <section class="current">
+            <li>
+              <p>В якому році було засновано музей археології?</p>
+              <span class="questionItem">
+                <input id="a1" type="radio" name="one" value="1708" /><label
+                  for="a1"
+                  >1708</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="a2" type="radio" name="one" value="1804" /><label
+                  for="a2"
+                  >1804</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="a3" type="radio" name="one" value="1807" /><label
+                  for="a3"
+                  >1807</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="a4" type="radio" name="one" value=" 1811" /><label
+                  for="a4"
+                >
+                  1811</label
+                >
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>Хто був першим директором музею?</p>
+              <span class="questionItem">
+                <input id="b1" type="radio" name="two" value="karazin" /><label
+                  for="b1"
+                  ><em>В. Н. Каразін</em></label
+                >
+              </span>
+              <span class="questionItem">
+                <input
+                  id="b2"
+                  type="radio"
+                  name="two"
+                  value="fedorovsky"
+                /><label for="b2"><em>О. С. Федоровський</em></label>
+              </span>
+              <span class="questionItem">
+                <input id="b3" type="radio" name="two" value="bakirov" /><label
+                  for="b3"
+                  ><em>В. С. Бакіров</em></label
+                >
+              </span>
+              <span class="questionItem">
+                <input
+                  id="b4"
+                  type="radio"
+                  name="two"
+                  value="vasylenko"
+                /><label for="b4"><em>В. Ю. Василенко</em></label>
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>
+                У якому році, у зв’язку з ліквідацією Харківського університету,
+                Археологічний музей одержав статус міського?
+              </p>
+              <span class="questionItem">
+                <input id="c1" type="radio" name="three" value="1920" /><label
+                  for="c1"
+                  >1920</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="c2" type="radio" name="three" value="1918" /><label
+                  for="c2"
+                  >1918</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="c3" type="radio" name="three" value="1904" /><label
+                  for="c3"
+                  >1904</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="c4" type="radio" name="three" value="1932" /><label
+                  for="c4"
+                  >1932</label
+                >
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>Яку назву отримав музей у 1998 році?</p>
+              <span class="questionItem">
+                <input id="d1" type="radio" name="four" value="museum1" /><label
+                  for="d1"
+                  >Музей арехології при Харківському національному університеті
+                  імені В. Н. Каразіна</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="d2" type="radio" name="four" value="museum2" /><label
+                  for="d2"
+                  >Музей археології й етнографії Слобідської України
+                  Харківського національного університету імені В. Н.
+                  Каразіна</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="d3" type="radio" name="four" value="museum3" /><label
+                  for="d3"
+                  >Музей археології та етнографії Харківщини</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="d4" type="radio" name="four" value="museum4" /><label
+                  for="d4"
+                  >Він не змінював свою назву</label
+                >
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>
+                Яка експозиція діє на постійній основі в музеї археології ХНУ
+                імені В. Н. Каразіна?
+              </p>
+              <span class="questionItem">
+                <input id="e1" type="radio" name="five" value="kharkiv" /><label
+                  for="e1"
+                  >Археологічна спадщина Харківщини</label
+                >
+              </span>
+              <span class="questionItem">
+                <input
+                  id="e2"
+                  type="radio"
+                  name="five"
+                  value="children"
+                /><label for="e2">Археологія для дітей</label>
+              </span>
+              <span class="questionItem">
+                <input
+                  id="e3"
+                  type="radio"
+                  name="five"
+                  value="noexhibitions"
+                /><label for="e3">Музей не має постійних експозицій</label>
+              </span>
+              <span class="questionItem">
+                <input
+                  id="e4"
+                  type="radio"
+                  name="five"
+                  value="scientists"
+                /><label for="e4"
+                  >Внесок вчених університету в розвиток археологічної
+                  науки</label
+                >
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>
+                Базою для діяльності якої археологічної експедиції не є музей
+                археології?
+              </p>
+              <span class="questionItem">
+                <input id="f1" type="radio" name="six" value="dnipro" /><label
+                  for="f1"
+                  >Пам’ятки Дніпро-Донецького Лісостепу епохи раннього залізного
+                  віку</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="f2" type="radio" name="six" value="bilske" /><label
+                  for="f2"
+                  >Більське городище скіфського часу</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="f3" type="radio" name="six" value="rome" /><label
+                  for="f3"
+                  >Поселення та могильники пізньоримського часу та пам’ятки доби
+                  раннього середньовіччя</label
+                >
+              </span>
+              <span class="questionItem">
+                <input
+                  id="f4"
+                  type="radio"
+                  name="six"
+                  value="slobidska"
+                /><label for="f4">Пам’ятки Слобідської культури</label>
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>Як сьогодні називається музей археології?</p>
+              <span class="questionItem">
+                <input id="g1" type="radio" name="seven" value="etno" /><label
+                  for="g1"
+                  >Музей археології та етнографії Слобідської України</label
+                >
+              </span>
+              <span class="questionItem">
+                <input
+                  id="g2"
+                  type="radio"
+                  name="seven"
+                  value="karazina"
+                /><label for="g2"
+                  >Музей археології ХНУ імені В. Н. Каразіна</label
+                >
+              </span>
+              <span class="questionItem">
+                <input
+                  id="g3"
+                  type="radio"
+                  name="seven"
+                  value="etno-karazina"
+                /><label for="g3"
+                  >Музей археології та етнографії Слобідської України ХНУ імені
+                  В. Н. Каразіна</label
+                >
+              </span>
+              <span class="questionItem">
+                <input
+                  id="g4"
+                  type="radio"
+                  name="seven"
+                  value="kharkiv-museum"
+                /><label for="g4">Харківський музей археології</label>
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>
+                Студенти якого факультету проходять практику на базі музею
+                археології?
+              </p>
+              <span class="questionItem">
+                <input
+                  id="h1"
+                  type="radio"
+                  name="eight"
+                  value="history"
+                /><label for="h1">Історичний</label>
+              </span>
+              <span class="questionItem">
+                <input
+                  id="h2"
+                  type="radio"
+                  name="eight"
+                  value="sociology"
+                /><label for="h2">Соціологічний</label>
+              </span>
+              <span class="questionItem">
+                <input
+                  id="h3"
+                  type="radio"
+                  name="eight"
+                  value="archeology"
+                /><label for="h3">Археологічний</label>
+              </span>
+              <span class="questionItem">
+                <input
+                  id="h4"
+                  type="radio"
+                  name="eight"
+                  value="philosophy"
+                /><label for="h4">Філософський</label>
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>Яку кількість відвідувачів щорічно приймає музей?</p>
+              <span class="questionItem">
+                <input id="i1" type="radio" name="nine" value="100" /><label
+                  for="i1"
+                  >100 тисяч</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="i2" type="radio" name="nine" value="10" /><label
+                  for="i2"
+                  >10 тисяч</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="i3" type="radio" name="nine" value="15" /><label
+                  for="i3"
+                  >15 тисяч</label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="i4" type="radio" name="nine" value="33" /><label
+                  for="i4"
+                  >33 тисячі</label
+                >
+              </span>
+              <button id="nextButton" onclick="nextQuestion();">
+                Наступне питання &gt;
+              </button>
+            </li>
+          </section>
+          <section>
+            <li>
+              <p>Чи були цікаво відповідати на питання вікторини?</p>
+              <span class="questionItem">
+                <input id="j1" type="radio" name="ten" value="yes" /><label
+                  for="j1"
+                  ><em>Так</em></label
+                >
+              </span>
+              <span class="questionItem">
+                <input id="j2" type="radio" name="ten" value="no" /><label
+                  for="j2"
+                  ><em>Ні</em></label
+                >
+              </span>
+              <a href="#" id="submitAnswers" class="finalButton"
+                >Відправити відповіді</a
+              >
+            </li>
+          </section>
+        </ul>
+      </div>
+      <!-- QUIZ SECTION -->
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+      <ul>
+        <li>
+          <a
+            class="adress"
+            target="_blank"
+            href="https://www.google.com/maps/place/Svobody+Square,+4,+Kharkiv,+Kharkivs'ka+oblast,+61000/@50.0042418,36.2257774,17z/data=!3m1!4b1!4m5!3m4!1s0x4127a11fe6d58c51:0x292ec8c2d144ae07!8m2!3d50.0042418!4d36.2279661"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a class="telephone" href="tel:+380577075166">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fas fa-phone" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            class="facebook"
+            target="_blank"
+            href="https://www.facebook.com/archae.karazin/"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            class="instagram"
+            target="_blank"
+            href="https://www.instagram.com/_museum_of_archeology_/"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            class="youtube"
+            target="_blank"
+            href="https://www.youtube.com/channel/UC3Qnl_bWStcfyw9NUkwd8Hg/videos"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- <p>
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/place/Svobody+Square,+4,+Kharkiv,+Kharkivs'ka+oblast,+61000/@50.0042418,36.2257774,17z/data=!3m1!4b1!4m5!3m4!1s0x4127a11fe6d58c51:0x292ec8c2d144ae07!8m2!3d50.0042418!4d36.2279661"
+          ><i class="fas fa-map-marker-alt"></i
+        ></a>
+      </p>
+      <p>
+        <a href="tel:+380577075166"><i class="fas fa-phone"></i></a>
+      </p>
+      <p>
+        <a href="mailto:maesu@karazin.ua"><i class="far fa-envelope"></i></a>
+      </p>
+      <p>
+        <a target="_blank" href="https://www.facebook.com/archae.karazin/">
+          <i class="fab fa-facebook"></i
+        ></a>
+      </p>
+      <p>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/_museum_of_archeology_/"
+        >
+          <i class="fab fa-instagram"></i
+        ></a>
+      </p>
+      <p>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/channel/UC3Qnl_bWStcfyw9NUkwd8Hg/videos"
+        >
+          <i class="fab fa-youtube"></i
+        ></a>
+      </p> -->
+    </footer>
+    <!-- FOOTER SECTION -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
